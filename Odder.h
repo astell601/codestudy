@@ -21,31 +21,29 @@ public:
     void Oddering(void)
     {
         int SUM;
-        cout << "1. ÇÜ¹ö°Å 2. °¨ÀÚÆ¢±è 3.ÄÝ¶ó 4. ¼¼Æ® 5. ¾ÆÀÌ½ºÅ©¸²" << endl;
-        cout << "Á¾·ù¿Í °¹¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä." << endl;
+        cout << "1. í–„ë²„ê±° 2. ê°ìžíŠ€ê¹€ 3.ì½œë¼ 4. ì„¸íŠ¸ 5. ì•„ì´ìŠ¤í¬ë¦¼" << endl;
+        cout << "ì¢…ë¥˜ì™€ ê°¯ìˆ˜ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”." << endl;
 
-        while ('\n' == 1)
-        {
-            cin >> NUM1 >> NUM2;
-            menu.InitMembers(NUM1);
-            SUM = menu.SaleMenu(NUM2);
-            SUM += SUM;
-        }
-        cout << endl << "°¡°ÝÀº" << SUM << "¿øÀÔ´Ï´Ù." << endl;
+        cin >> NUM1 >> NUM2;
+        menu.InitMembers(NUM1);
+        SUM = menu.SaleMenu(NUM2);
+        SUM += SUM;
+        
+        cout << endl << "ê°€ê²©ì€" << SUM << "ì›ìž…ë‹ˆë‹¤." << endl;
 
-        cout << "1. Ä«µå °áÁ¦ 2. Çö±Ý °áÁ¦" << endl;
+        cout << "1. ì¹´ë“œ ê²°ì œ 2. í˜„ê¸ˆ ê²°ì œ" << endl;
         cin >> PAY; 
         if (PAY == 1)
-            cout << "°áÁ¦ ¿Ï·á" << endl;
+            cout << "ê²°ì œ ì™„ë£Œ" << endl;
         else if (PAY == 2)
         {
-            cout << "¾ó¸¶¸¦ ³»½Ã°Ú½À´Ï±î?" << endl;
+            cout << "ì–¼ë§ˆë¥¼ ë‚´ì‹œê² ìŠµë‹ˆê¹Œ?" << endl;
             cin >> MONEY;
-            cout << "°Å½º¸§µ·Àº" << MONEY - menu.SaleMenu(NUM2)<< "¿øÀÔ´Ï´Ù." << endl;
+            cout << "ê±°ìŠ¤ë¦„ëˆì€" << MONEY - menu.SaleMenu(NUM2)<< "ì›ìž…ë‹ˆë‹¤." << endl;
         }
 
         else
-            cout << "Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù." << endl;
+            cout << "ìž˜ëª»ëœ ìž…ë ¥ìž…ë‹ˆë‹¤." << endl;
 
     }
 };
